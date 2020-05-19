@@ -1,0 +1,201 @@
+.about {
+  padding-bottom: 22px;
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 28px;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 60px;
+  color: #111111;
+}
+
+.about__item {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: #68b738;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    width: 50px;
+    height: 50px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.about__item--leaf {
+  &::after {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+}
+
+.about__item--powder {
+  &::after {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+}
+
+.about__item--dining {
+  &::after {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+}
+
+.about__item--clock {
+  &::after {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+.about__item-descr {
+  position: relative;
+  padding-top: 2px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: arial, sans-serif;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .about__item--leaf {
+    &::after {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
+  }
+
+  .about__item--powder {
+    &::after {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
+  }
+
+  .about__item--dining {
+    &::after {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
+  }
+
+  .about__item--clock {
+    &::after {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about {
+    padding-top: 28px;
+    padding-bottom: 59px;
+  }
+
+  .about__title {
+    margin-bottom: 72px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .about__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about__item {
+    width: 324px;
+    margin: 0;
+    padding: 0;
+    padding-top: 96px;
+    padding-bottom: 27px;
+
+    &::before {
+      top: 0px;
+      left: 0;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      top: 15px;
+      left: 15px;
+    }
+  }
+
+  .about__item--leaf {
+    margin-bottom: 90px;
+  }
+
+  .about__item-descr {
+    width: 245px;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      position: absolute;
+      top: -153px;
+      left: 115px;
+      z-index: -1;
+
+      font-size: 282px;
+      line-height: 282px;
+      color: #f2f2f2;
+      font-family: "Oswald","Arial",sans-serif;
+    }
+  }
+
+  .about__item--leaf .about__item-descr::after {
+    content: "1";
+  }
+
+  .about__item--powder .about__item-descr::after {
+    content: "2";
+  }
+
+  .about__item--dining .about__item-descr::after {
+    content: "3";
+  }
+
+  .about__item--clock .about__item-descr::after {
+    content: "4";
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    padding: 0;
+    padding-top: 73px;
+  }
+
+  .about__title {
+    margin-bottom: 72px;
+  }
+
+  .about__item {
+    width: 246px;
+    padding-bottom: 0;
+  }
+}

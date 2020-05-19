@@ -1,0 +1,23 @@
+.btn {
+  display: block;
+  padding: 11px 11px;
+
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+
+  background-color: #68b738;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #5eaa2f;
+  }
+}
